@@ -32,7 +32,7 @@ public class StorageService {
         try {
             Files.createDirectories(rootLocation);
         } catch (IOException e) {
-            throw new RuntimeException();//TODO Добавить ошибку
+            throw new RuntimeException(Errors.COULD_NOT_INITIALIZE_STORAGE_LOCATION.value(), e);
         }
     }
 
